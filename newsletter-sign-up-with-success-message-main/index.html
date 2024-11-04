@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function myfunc() {
+                let inp = document.getElementById("imail").value;
+                let arr = inp.split("");
+                for(let i = 0; i < arr.length; i++) {
+                    if(arr[i] === "@") {
+                        window.location.href = "index2.html";
+                    }
+                    else {
+                        document.getElementById("imail").style.color = "rgba(255,0,0,0.7)";
+                        document.getElementById("imail").style.border = "2px solid rgba(255,0,0,0.4)";
+                        document.getElementById("imail").style.backgroundColor = "rgba(255,0,0,0.2)";
+                        document.getElementById("spn").innerHTML = "Valid email required";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="headings">
+            <h1>Stay updated!</h1>
+            <p>Join 60,000+ product managers receiving monthly<br> updates on.</p>
+            <div class="lines3">
+                <p>Product discovery and building what matters</p>
+                <p>Measuring to ensure updates are a success</p>
+                <p>And much more!</p>
+            </div>
+            <div class="input">
+                <b>Email address</b>
+                <span id="spn"></span>
+                <br>
+                <input id="imail" type="email" name="email" placeholder="email@company.com">
+                <br>
+                <button onclick="myfunc()">Subscribe to monthly newsletter</button>
+            </div>
+            </div>
+            <img class="image" src="6817300.jpg" width="40%" height="100%">
+        </div>
+        <div style="margin: auto;">
+        <p style="color: antiquewhite;  margin:auto; text-align: center">Coded by Muhammad Ibrahim</p>
+        </div>
+    </body>
+</html>
