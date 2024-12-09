@@ -3,23 +3,7 @@
     <head>
         <title>Home page</title>
         <link rel="stylesheet" href="styles.css">
-        <script>
-            function myfunc() {
-                let inp = document.getElementById("imail").value;
-                let arr = inp.split("");
-                for(let i = 0; i < arr.length; i++) {
-                    if(arr[i] === "@") {
-                        window.location.href = "index2.html";
-                    }
-                    else {
-                        document.getElementById("imail").style.color = "rgba(255,0,0,0.7)";
-                        document.getElementById("imail").style.border = "2px solid rgba(255,0,0,0.4)";
-                        document.getElementById("imail").style.backgroundColor = "rgba(255,0,0,0.2)";
-                        document.getElementById("spn").innerHTML = "Valid email required";
-                    }
-                }
-            }
-        </script>
+        <script src="script.js"></script>
     </head>
     <body>
         <div class="main">
